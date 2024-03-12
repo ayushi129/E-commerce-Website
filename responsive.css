@@ -231,7 +231,7 @@
     }
 }
 /* About page Mobile */
-@media (max-width: 1025px){
+@media (max-width: 477px){
     #about-head #about-text{
         padding: 20px;
     }
@@ -246,3 +246,40 @@
         margin: 30px auto 0 auto;
     }
 }
+
+
+/* Contact Page Tablet */
+@media (max-width: 1025px){
+    #form-details form{
+        width: 50%;
+    }
+    #form-details .people{
+        width: 40%;
+    }
+}
+/* Contact Page Mobile */
+@media (max-width: 477px){
+    #contact-details{
+        flex-direction: column;
+    }
+    #contact-details .details{
+        width: 100%;
+    }
+    #contact-details .map{
+        width: 100%;
+        margin-top: 20px;
+    }
+    #form-details{
+        margin: 10px;
+        padding: 30px 10px;
+        flex-wrap: wrap;
+    }
+    #form-details form{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #form-details .people{
+        width: 100%;
+    }
+}
+
