@@ -1,0 +1,49 @@
+#about-header{
+    background-image: url(./Images/about/banner.png);
+    height: 37vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+#about-header h2,
+#about-header p{
+    color: #fff;
+}
+#about-head{
+    display: flex;
+    justify-content: center;
+}
+#about-head marquee{
+    padding: 5px;
+}
+#about-head img{
+    width: 50%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: right;
+}
+#about-head #about-text{
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+#about-app{
+    text-align: center;
+}
+#about-app .video{
+    width: 70%;
+    height: 50%;
+    margin: 30px auto 0 auto;
+}
+#about-app .video video{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
