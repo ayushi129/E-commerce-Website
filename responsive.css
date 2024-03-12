@@ -1,3 +1,5 @@
+/* Mainly for Home Page and Common Elements of Website */
+/* Tablet */
 @media (max-width: 799px){
     /* Global Styles */
     .section-p1 {
@@ -91,7 +93,7 @@
         width: 70%;
     }
 }
-
+/* Mobile */
 @media (max-width: 477px){
     #header{
         padding: 10px 30px;
@@ -143,4 +145,63 @@
         left: 20px;
         transform: translate(0, 0);
 }
+}
+
+
+
+/* Product Description Page Tablet */
+@media (max-width: 799px){
+    #productDetails .single-Product-Details{
+        margin-left: 5px;
+    }
+}
+/* Product Description Page Mobile */
+@media (max-width: 477px){
+    #productDetails{
+        flex-direction: column;
+    }
+    #productDetails .single-Product-Img{
+        width: 100%;
+        margin-right: 0;
+    }
+    #productDetails .single-Product-Details{
+        width: 100%;
+    }
+    #productDetails .single-Product-Details select{
+        margin-top: 5px;
+    }
+}
+
+
+/* Blog Page Tablet */
+@media (max-width: 799px){
+    #blog .blog-box h1{
+        font-size: 55px;
+        top: -35px;
+    }
+    #blog-header h2{
+        font-size: 45px;
+    }
+    #blog .blog-details p{
+        font-size: 14px;
+    }
+}
+/* Blog Page Mobile */
+@media (max-width: 477px){
+    #blog .blog-box{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #blog{
+        padding: 100px 20px 0 20px;
+    }
+    #blog .blog-img{
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #blog .blog-details{
+        width: 100%;
+    }
 }

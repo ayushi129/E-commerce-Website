@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Page</title>
+    <title>Product Description</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="shop.css">
     <link rel="stylesheet" href="productDesc.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 
@@ -68,6 +69,78 @@
             <button class="normal">Add To Cart</button>
             <h4>Product Details</h4>
             <span>Introducing our Men's Fashion T-Shirt, a stylish and comfortable addition to your wardrobe. Made from high-quality materials, this T-shirt offers a perfect blend of style and comfort. Featuring a classic design, this T-shirt is suitable for various occasions. Whether you're going for a casual outing or a night out with friends, this T-shirt is a versatile choice.Available in multiple sizes, you can find the perfect fit for you. Choose from XL, XXL, Small, Large, or Medium to ensure a comfortable and flattering fit. Priced reasonably, this T-shirt offers great value for money. Add it to your cart now and elevate your fashion game!</span>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Summer Collection New Modern Design</p>
+        <div class="productContainer">
+            <div class="product" onclick="redirectToProductDesc('./Images/products/n1.jpg');">
+                <img src="./Images/products/n1.jpg" alt="">
+                <div class="description">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="product" onclick="redirectToProductDesc('./Images/products/n2.jpg');">
+                <img src="./Images/products/n2.jpg" alt="">
+                <div class="description">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="product" onclick="redirectToProductDesc('./Images/products/n3.jpg');">
+                <img src="./Images/products/n3.jpg" alt="">
+                <div class="description">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="product" onclick="redirectToProductDesc('./Images/products/n4.jpg');">
+                <img src="./Images/products/n4.jpg" alt="">
+                <div class="description">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
         </div>
     </section>
 
@@ -134,5 +207,41 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+        var mainImg = document.getElementById('mainImg');
+        var smallImg = document.getElementsByClassName('smallImg');
+        smallImg[0].onclick = function(){
+            mainImg.src = smallImg[0].src;
+        }              
+        smallImg[1].onclick = function(){
+            mainImg.src = smallImg[1].src;
+        }              
+        smallImg[2].onclick = function(){
+            mainImg.src = smallImg[2].src;
+        }              
+        smallImg[3].onclick = function(){
+            mainImg.src = smallImg[3].src;
+        }         
+    </script>
+
+    <script>
+        // Function to redirect to product description page with the clicked image
+        function redirectToProductDesc(imageSrc) {
+            var encodedSrc = encodeURIComponent(imageSrc);
+            window.location.href = "productDesc.html?mainImgSrc=" + encodedSrc;
+        }
+       document.addEventListener("DOMContentLoaded", function() {
+            var mainImg = document.getElementById('mainImg');
+            var queryParams = new URLSearchParams(window.location.search);
+            var mainImgSrc = queryParams.get('mainImgSrc');
+
+            // Set the main image source to the one passed in the query parameter
+            if (mainImgSrc) {
+                mainImg.src = decodeURIComponent(mainImgSrc);
+            }
+        });
+    </script>
+
 </body>
 </html>

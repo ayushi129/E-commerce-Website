@@ -46,8 +46,10 @@
     cursor: pointer;
 }
 #productDetails .single-Product-Details span{
-    line-height: 24px;
+    line-height: 25px;
 }
 .single-Product-Img{
     width: 45%;
 }
+
+
