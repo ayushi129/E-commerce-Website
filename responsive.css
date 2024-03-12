@@ -283,3 +283,25 @@
     }
 }
 
+
+
+/* Cart Page Tablet */
+@media (max-width: 799px){
+    #cart{
+        overflow-x: auto;
+    }
+}
+/* Cart Page Mobile */
+@media (max-width: 477px){
+    #cart-add{
+        flex-direction: column;
+    }
+    #coupon{
+        width: 100%;
+    }
+    #sub-total{
+        width: 100%;
+        padding: 20px;
+    }
+}
+
